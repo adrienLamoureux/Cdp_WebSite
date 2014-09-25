@@ -1,12 +1,15 @@
 <?php
+	//Database connection
 	$id_conn = mysqli_connect('localhost', 'root', '','cnrs')or die('impossible de se connecter');
 
-	//select database
+	//Select database
 	mysqli_select_db($id_conn,'cnrs')or die("connection a la base impossible");
-	$req="select titre,thematique,type from atelier ";
-	$res = mysqli_query($id_conn,$req);
 
-	//read database for listing
+	//Select data from "atelier"
+	$request="select titre, thematique, type from atelier ";
+	$res = mysqli_query($id_conn,$request);
+
+	//Routine to load data and print as a simple list
 	while($ligne = mysqli_fetch_row($res)){
 		echo "<tr style='color:blue;text-align:center'>\n
 	       <td><i/><b/>$ligne[0]</td>
