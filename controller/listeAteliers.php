@@ -2,8 +2,12 @@
 class TableAteliers
 {
 	private $_id_conn;
+	
+	function __construct(){
+		$this->initiate_connection();
+	}
 
-	public function initiate_connection(){
+	protected function initiate_connection(){
 		//Database connection
 		$this->_id_conn = mysqli_connect('localhost', 'root', '','cnrs')or die('impossible de se connecter');
 		//Select database
@@ -40,7 +44,6 @@ class TableAteliers
 		
 }
 $t_ateliers = new TableAteliers(); 
-$t_ateliers->initiate_connection();
 $ateliers = $t_ateliers->get_ateliers();
 $t_ateliers->build_table($ateliers);
 ?>
