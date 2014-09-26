@@ -12,11 +12,11 @@
 	//Routine to load data and print as a simple list
 	while($ligne = mysqli_fetch_row($res)){
 		echo "<tr>\n
-	       <td><i/><b/>$ligne[0]</td>
+	       <td><i/><b/><a href = '../controller/afficherAtelier.php?titre=$ligne[0]'>$ligne[0]</a></td>
 		   <td><i/><b/>$ligne[1]</td>
 		   <td><i/><b/>$ligne[2]</td>
 		   <td><i/><b/>$ligne[3]</td>
-		   <td><img src=../image/mod.png><a href = '../controller/supprimerAtelier.php?titre=$ligne[0]' /a><img src=../image/sup.png></td>";
+		   <td><a href = '../controller/modifierAtelier.php?titre=$ligne[0]'/a><img src=../image/mod.png><a href = '../controller/supprimerAtelier.php?titre=$ligne[0]'/a><img src=../image/sup.png></td>";
         echo " </tr>\n";
 	}
 ?>
