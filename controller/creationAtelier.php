@@ -4,7 +4,7 @@
 	
 	private $_id_conn;
 	
-	public  function creationAtelier(){
+	 function creationAtelier(){
 	$this->initiate_connection();
 	}
 
