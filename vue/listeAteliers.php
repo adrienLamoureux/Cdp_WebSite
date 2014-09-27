@@ -21,7 +21,7 @@ include("../controller/listeAteliers.php");
 ?>
 
 			</table>
-			<a href='../controller/creationAtelier.php'><center><input type="button" value="ajouter atelier"></a>
+			<a href='../vue/creationAtelier.php'><center><input type="button" value="ajouter atelier"></a>
 		</div>
 	</body>
 </html>
