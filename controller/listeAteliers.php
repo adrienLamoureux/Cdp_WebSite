@@ -36,12 +36,7 @@ class TableAteliers
 			echo "<td><i/><b/>$ligne[$i]</td>";
 		}
 		echo "<td><a href = '../controller/modifierAtelier.php?titre=$ligne[0]'/a><img src=../image/mod.png><a href = '../controller/supprimerAtelier.php?titre=$ligne[0]'/a><img src=../image/sup.png></td>";
-	}
-
-	//TODO
-	// TEST FUNCTION for E2E
-	// TEST FUNCTION for BDD
-		
+	}		
 }
 $t_ateliers = new TableAteliers(); 
 $ateliers = $t_ateliers->get_ateliers();
