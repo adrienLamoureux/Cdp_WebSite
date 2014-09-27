@@ -27,7 +27,7 @@
 	
 	<h1 align="center" style='color:red' > Formulaire de création d'atelier </h1>
         <div>
-            <form method="get"  id="For" onsubmit="return verifconfirm ()" action="ajouterateliercontrol.php">
+            <form method="get"  id="For" onsubmit="return verifconfirm ()" action="../controller/creationAtelier.php">
                 <fieldset>
                     <legend>Ajouter atelier</legend>
     
