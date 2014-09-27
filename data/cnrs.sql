@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 24 Septembre 2014 à 15:24
+-- Généré le :  Sam 27 Septembre 2014 à 15:53
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -45,8 +45,15 @@ CREATE TABLE IF NOT EXISTS `atelier` (
 --
 
 INSERT INTO `atelier` (`titre`, `thematique`, `type`, `horaire`, `nomlab`, `Lieu`, `durée`, `capacité`) VALUES
-('atelier1', 'sport', 'course', '2014-09-01', 'recherche1', 'je sais pas', 1, 8),
-('atelier2', 'robot', 'robo1515', '2014-09-12', 'recherche7', 'bordeaux', 5, 7);
+('a', 'a', 'a', '0000-00-00', 'a', 'a', 0, 0),
+('b', 'bb', 'b', '0000-00-00', 'b', 'b', 0, 0),
+('c', 'c', 'c', '2014-09-01', 'c', 'c', 1, 1),
+('cdscsdcsd', 'e', 's', '2014-09-01', 'd', 'f', 4, 1),
+('dbz', 'e', 's', '2014-09-01', 'd', 'f', 4, 1),
+('dedezd', 'c', 'c', '2014-09-01', 'c', 'c', 1, 1),
+('fdsfds', 'fefe', 'gtgt', '2014-09-01', 'recherche1', 'gtgrgtr', 1, 1),
+('super expo', 'on verra bien', 'pas important', '2014-09-01', 'cnrs', 'quelque part', 1, 1),
+('super_expo', 'on verra bien', 'pas important', '2014-09-01', 'cnrs', 'quelque part', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -73,16 +80,6 @@ INSERT INTO `labo` (`Nomlabo`, `Nomresp`, `tel`, `mail`, `motdepasse`) VALUES
 ('recherche3', 'youssef', '04251547', 'lesahri@hotmail.fr', 'omarsa'),
 ('recherche5', 'youssef', '04251547', 'lesahri@hotmail.fr', 'omarsa'),
 ('recherche7', 'youssef', '04251547', 'lesahri@hotmail.fr', 'omarsa');
-
---
--- Contraintes pour les tables exportées
---
-
---
--- Contraintes pour la table `atelier`
---
-ALTER TABLE `atelier`
-  ADD CONSTRAINT `atelier_ibfk_1` FOREIGN KEY (`nomlab`) REFERENCES `labo` (`Nomlabo`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
