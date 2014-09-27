@@ -31,7 +31,7 @@ class TableAteliers
 	}
 	
 	protected function build_lines($ligne){
-		echo "<td><i/><b/><a href = '../controller/afficherAtelier.php?titre=$ligne[0]'>$ligne[0]</a></td>";
+		echo "<td><i/><b/><a href = '../vue/afficherAtelier.php?titre=$ligne[0]'>$ligne[0]</a></td>";
 		for($i=1;$i<count($ligne);$i++){
 			echo "<td><i/><b/>$ligne[$i]</td>";
 		}
