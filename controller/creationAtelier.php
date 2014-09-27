@@ -4,11 +4,11 @@
 	
 	private $_id_conn;
 	
-	 function creationAtelier(){
-	$this->initiate_connection();
+	function __construct(){
+		$this->initiate_connection();
 	}
 
-	public function initiate_connection(){
+	protected function initiate_connection(){
 		//Database connection
 		$this->_id_conn = mysqli_connect('localhost', 'root', '','cnrs')or die('impossible de se connecter');
 		//Select database
@@ -25,12 +25,12 @@
 	$DR=$_GET['DR'];
 	$CA=$_GET['CA'];
 	
-	$req="insert into atelier  values ('$TA','$TH','$TY','$HR','$LAB','$LI','$DR','$CA')";
+	$req="insert into atelier values ('$TA','$TH','$TY','$HR','$LAB','$LI','$DR','$CA')";
 	$resu=mysqli_query($this->_id_conn,$req) or die("requête non conforme".mysql_error());
 	
-		header("location: listeAteliers.php");
-		}
-		}
+		header("location: ../vue/listeAteliers.php");
+	}
+	}
 		
 	$creation = new creationAtelier();
 	$creation->remplirBD();
