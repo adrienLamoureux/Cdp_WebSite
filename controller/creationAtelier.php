@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 	class creationAtelier {
 	
@@ -30,8 +30,27 @@
 	
 		header("location: ../vue/listeAteliers.php");
 	}
+	 public function updateBD(){
+	$TA=$_GET['TA'];
+	$TH=$_GET['TH'];
+	$TY=$_GET['TY'];
+	$HR=$_GET['HR'];
+	$LAB=$_GET['LAB'];
+	$LI=$_GET['LI'];
+	$DR=$_GET['DR'];
+	$CA=$_GET['CA'];
+	
+	$req="UPDATE  atelier SET thematique ='$TH', type='$TY',horaire=$HR, nomlab='$LAB', Lieu= '$LI', durée='$DR',capacité='$CA' WHERE atelier.titre = '$TA'";
+	$resu=mysqli_query($this->_id_conn,$req) or die("update error".mysql_error());
+	
+		header("location: ../vue/listeAteliers.php");
+	
+	}
 	}
 		
 	$creation = new creationAtelier();
-	$creation->remplirBD();
+	if(!isset($_GET['MO'])){
+	$creation->remplirBD();}
+	else {
+	$creation->updateBD();}
 ?>
