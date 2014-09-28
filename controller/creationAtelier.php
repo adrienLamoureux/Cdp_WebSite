@@ -39,10 +39,10 @@
 	$LI=$_GET['LI'];
 	$DR=$_GET['DR'];
 	$CA=$_GET['CA'];
-	
-	$req="UPDATE  atelier SET thematique ='$TH', type='$TY',horaire=$HR, nomlab='$LAB', Lieu= '$LI', durée='$DR',capacité='$CA' WHERE atelier.titre = '$TA'";
-	$resu=mysqli_query($this->_id_conn,$req) or die("update error".mysql_error());
-	
+	$req="delete from atelier where titre='$TA'";
+	$resu=mysqli_query($this->_id_conn,$req)or die("suppression error".mysql_error());
+	$req="insert into atelier values ('$TA','$TH','$TY','$HR','$LAB','$LI','$DR','$CA')";
+	$resu=mysqli_query($this->_id_conn,$req)or die("insertion error".mysql_error());
 		header("location: ../vue/listeAteliers.php");
 	
 	}
